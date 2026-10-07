@@ -1,0 +1,2 @@
+1c50dfe4fc4e669e94d18d9bd63c08db81956f82e46696536b4fad9c2ce975e7  Kin-1.2-beta.apk
+15e93af461e901e383bf3e46e0d82403cf9e337bef68ff1b27f74ad51764deb1  Kin-Android-1.2-beta-source.tar.gz
