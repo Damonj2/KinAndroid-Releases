@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "channel": "beta",
+  "versionName": "1.2-beta",
+  "versionCode": 11,
+  "tag": "v1.2-beta",
+  "apkUrl": "https://github.com/Damonj2/KinAndroid-Releases/releases/download/v1.2-beta/Kin-1.2-beta.apk",
+  "apkSha256": "1c50dfe4fc4e669e94d18d9bd63c08db81956f82e46696536b4fad9c2ce975e7",
+  "apkSize": 147670797,
+  "releaseUrl": "https://github.com/Damonj2/KinAndroid-Releases/releases/tag/v1.2-beta",
+  "publishedAt": "2026-10-07T15:21:55Z",
+  "notes": [
+    "GKD Core Beta",
+    "UI Cleaner engine upgrade",
+    "Diagnostic logging improvements"
+  ]
+}
