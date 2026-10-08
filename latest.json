@@ -1,17 +1,19 @@
 {
   "schemaVersion": 1,
   "channel": "beta",
-  "versionName": "1.2-beta.6",
-  "versionCode": 17,
-  "tag": "v1.2-beta.6",
-  "apkUrl": "https://github.com/Damonj2/KinAndroid-Releases/releases/download/v1.2-beta.6/Kin-v1.2-beta.6-FIRST-ZERO-debug.apk",
-  "apkSha256": "65b7992a1129a33b4a3fc494f9e85d29c829f388892cbfe2d17aaec69a46cb5f",
-  "apkSize": 147836617,
-  "releaseUrl": "https://github.com/Damonj2/KinAndroid-Releases/releases/tag/v1.2-beta.6",
-  "publishedAt": "2026-10-08T14:15:37Z",
+  "versionName": "1.2-beta.8",
+  "versionCode": 19,
+  "tag": "v1.2-beta.8",
+  "apkUrl": "https://github.com/Damonj2/KinAndroid-Releases/releases/download/v1.2-beta.8/Kin-v1.2-beta.8-Host-query-root-reconcile-debug.apk",
+  "apkSha256": "bb4bbee91c1e8a0702089d45c9c29e8a5d6886143eede2e14072cd8f17a95f4e",
+  "apkSize": 147844433,
+  "releaseUrl": "https://github.com/Damonj2/KinAndroid-Releases/releases/tag/v1.2-beta.8",
+  "publishedAt": "2026-10-09T01:30:00Z",
   "notes": [
-    "新增 UI Cleaner FIRST ZERO 诊断链，用于定位 GKD 规则真实执行断点",
-    "本版本未改变 GKD 过滤执行逻辑",
-    "记录 appRules、candidates、ready、selector 与 action 的逐层结果"
+    "修复 Host query/root 时间错配：root 成为执行真值，不再用 stale event.packageName 查询别的 App 的节点树",
+    "新增 HOST_RECONCILE 行为诊断（ALIGNED / REBOUND_TO_ROOT / DROPPED_*）",
+    "block 名单最小补齐 launcher/systemui，避免对系统桌面执行全局规则",
+    "补齐位置权限（细/粗略），系统权限页可见「位置」条目",
+    "本版本改变 GKD 过滤执行路径（Host 侧对账），未改动 selector/runtime 核心"
   ]
 }

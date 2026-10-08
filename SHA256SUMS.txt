@@ -1,2 +1,2 @@
-3a4f216359c441829dfac51fae9fb86f91d9210bf451267a91f88dbcc4b9d8e3  Kin-1.2-beta.3.apk
-d035a8eea5d6dea3641ac3852160506db8aa1458aa252a79a99fd795eee3e119  Kin-Android-1.2-beta.3-source.tar.gz
+bb4bbee91c1e8a0702089d45c9c29e8a5d6886143eede2e14072cd8f17a95f4e  Kin-v1.2-beta.8-Host-query-root-reconcile-debug.apk
+0c4f1305a4842e1f3679f6d99ef0dd7f66a351fd6ee806275d31e788a2b044ce  Kin-Android-1.2-beta.8-source.tar.gz
