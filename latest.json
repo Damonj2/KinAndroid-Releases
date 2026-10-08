@@ -1,19 +1,18 @@
 {
   "schemaVersion": 1,
   "channel": "beta",
-  "versionName": "1.2-beta.2",
-  "versionCode": 13,
-  "tag": "v1.2-beta.2",
-  "apkUrl": "https://github.com/Damonj2/KinAndroid-Releases/releases/download/v1.2-beta.2/Kin-1.2-beta.2.apk",
-  "apkSha256": "88a8f6d240ddb0b404e91383a8715a3dbee3f97143227652062e04279f652b9b",
-  "apkSize": 147812669,
-  "releaseUrl": "https://github.com/Damonj2/KinAndroid-Releases/releases/tag/v1.2-beta.2",
-  "publishedAt": "2026-10-08T01:05:00Z",
+  "versionName": "1.2-beta.3",
+  "versionCode": 14,
+  "tag": "v1.2-beta.3",
+  "apkUrl": "https://github.com/Damonj2/KinAndroid-Releases/releases/download/v1.2-beta.3/Kin-1.2-beta.3.apk",
+  "apkSha256": "3a4f216359c441829dfac51fae9fb86f91d9210bf451267a91f88dbcc4b9d8e3",
+  "apkSize": 147812329,
+  "releaseUrl": "https://github.com/Damonj2/KinAndroid-Releases/releases/tag/v1.2-beta.3",
+  "publishedAt": "2917190(date -u +%Y-%m-%dT%H:%M:%SZ)",
   "notes": [
-    "修复 OTA 安装无法唤起系统安装器（缺少 REQUEST_INSTALL_PACKAGES）",
-    "安装器改用 ACTION_INSTALL_PACKAGE，失败回落 ACTION_VIEW 并给出提示",
-    "修复无障碍服务被系统自动关闭",
-    "加固本地规则编辑与持久化",
-    "统一底部 Tab 导航并修正净化页 insets"
+    "修复本地规则导航崩溃（route 尾部斜杠导致 destination not found）",
+    "修复检查更新 SecurityException 防崩",
+    "加固无障碍服务生命周期",
+    "加固本地规则编辑与持久化"
   ]
 }
