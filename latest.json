@@ -1,17 +1,17 @@
 {
   "schemaVersion": 1,
   "channel": "beta",
-  "versionName": "1.2-beta",
-  "versionCode": 11,
-  "tag": "v1.2-beta",
-  "apkUrl": "https://github.com/Damonj2/KinAndroid-Releases/releases/download/v1.2-beta/Kin-1.2-beta.apk",
-  "apkSha256": "1c50dfe4fc4e669e94d18d9bd63c08db81956f82e46696536b4fad9c2ce975e7",
-  "apkSize": 147670797,
-  "releaseUrl": "https://github.com/Damonj2/KinAndroid-Releases/releases/tag/v1.2-beta",
-  "publishedAt": "2026-10-07T15:21:55Z",
+  "versionName": "1.2-beta.1",
+  "versionCode": 12,
+  "tag": "v1.2-beta.1",
+  "apkUrl": "https://github.com/Damonj2/KinAndroid-Releases/releases/download/v1.2-beta.1/Kin-1.2-beta.1.apk",
+  "apkSha256": "9cee8690ae265fc3d71956d44ba554ffad042d3d225ec28d2ebacc3f84ffc205",
+  "apkSize": 147812213,
+  "releaseUrl": "https://github.com/Damonj2/KinAndroid-Releases/releases/tag/v1.2-beta.1",
+  "publishedAt": "2026-10-08T00:52:00Z",
   "notes": [
-    "GKD Core Beta",
-    "UI Cleaner engine upgrade",
-    "Diagnostic logging improvements"
+    "修复无障碍服务被系统自动关闭",
+    "加固本地规则编辑与持久化",
+    "统一底部 Tab 导航并修正净化页 insets"
   ]
 }
