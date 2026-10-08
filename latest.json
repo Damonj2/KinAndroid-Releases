@@ -8,7 +8,7 @@
   "apkSha256": "3a4f216359c441829dfac51fae9fb86f91d9210bf451267a91f88dbcc4b9d8e3",
   "apkSize": 147812329,
   "releaseUrl": "https://github.com/Damonj2/KinAndroid-Releases/releases/tag/v1.2-beta.3",
-  "publishedAt": "2917190(date -u +%Y-%m-%dT%H:%M:%SZ)",
+  "publishedAt": "2026-10-08T03:18:01Z",
   "notes": [
     "修复本地规则导航崩溃（route 尾部斜杠导致 destination not found）",
     "修复检查更新 SecurityException 防崩",
