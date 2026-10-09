@@ -1,19 +1,20 @@
 {
   "schemaVersion": 1,
   "channel": "beta",
-  "versionName": "1.2-beta.9",
-  "versionCode": 20,
-  "tag": "v1.2-beta.9",
-  "apkUrl": "https://github.com/Damonj2/KinAndroid-Releases/releases/download/v1.2-beta.9/Kin-v1.2-beta.9-gate-split-subscription-names-debug.apk",
-  "apkSha256": "282f2b986df59e13b800d9eb5853e96904272f8f0c3d02996529073cb33ea831",
-  "apkSize": 147850257,
-  "releaseUrl": "https://github.com/Damonj2/KinAndroid-Releases/releases/tag/v1.2-beta.9",
-  "publishedAt": "2026-10-09T02:45:00Z",
+  "versionName": "1.2-beta.10",
+  "versionCode": 21,
+  "tag": "v1.2-beta.10",
+  "apkUrl": "https://github.com/Damonj2/KinAndroid-Releases/releases/download/v1.2-beta.10/Kin-v1.2-beta.10-blocked-transition-reentry-debug.apk",
+  "apkSha256": "f53db5aa6023c88333b78608ebb6e2c0eee3b5b58a4643353803003e446cbd42",
+  "apkSize": 147869481,
+  "releaseUrl": "https://github.com/Damonj2/KinAndroid-Releases/releases/tag/v1.2-beta.10",
+  "publishedAt": "2026-10-09T05:45:00Z",
   "notes": [
-    "诊断插桩：拆分 disabledSkip 为 disabledMasterSkip / disabledPausedSkip，两个 gate 各自归因（只加观测，不改执行语义）",
-    "新增 UI_CLEANER_GATE_STATE 诊断：SERVICE_CONNECTED / DATASTORE_UPDATE / DISABLED_SKIP 三来源统一落盘",
-    "新增 APP_RULE_STATS_TRACE：对账「订阅/可执行/不兼容」三层口径，定位「显示 0」丢在哪一层",
-    "引擎状态区显示真实订阅名，去掉写死的 Lin-arm / ganlinte",
-    "本版本未改动 GKD selector/runtime/pipeline 执行路径"
+    "blocked 转场不再直接丢弃：转场瞬间 root 仍属 launcher 时，改为拒绝执行 + 排一次 fresh reentry（真机 com.coolapk.market 51/51 DROPPED_BLOCKED 的修复）",
+    "诊断上传凭据改为运行时（Android Keystore AES-GCM），移除构建期 shared secret；诊断页新增凭据管理与一键上传",
+    "DiagnosticId 区分本地十六进制与服务端 Crockford Base32 两套校验，避免把合法服务端 ID 判为非法",
+    "新增 scripts/fetch-diagnostic.sh 用于本机取回诊断包",
+    "全量 625/625 测试通过",
+    "⚠️ 诊断上传链路未经端到端验证（R2 为空，对象键约定未证实）"
   ]
 }
