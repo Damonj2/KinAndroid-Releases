@@ -1,2 +1,2 @@
-bb4bbee91c1e8a0702089d45c9c29e8a5d6886143eede2e14072cd8f17a95f4e  Kin-v1.2-beta.8-Host-query-root-reconcile-debug.apk
-0c4f1305a4842e1f3679f6d99ef0dd7f66a351fd6ee806275d31e788a2b044ce  Kin-Android-1.2-beta.8-source.tar.gz
+282f2b986df59e13b800d9eb5853e96904272f8f0c3d02996529073cb33ea831  Kin-v1.2-beta.9-gate-split-subscription-names-debug.apk
+89e9f82e75c8419323b3f6bfd63bb09f2d6a61800cb27ffe43ba8ceda180bb95  Kin-Android-1.2-beta.9-source.tar.gz

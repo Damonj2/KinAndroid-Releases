@@ -1,19 +1,19 @@
 {
   "schemaVersion": 1,
   "channel": "beta",
-  "versionName": "1.2-beta.8",
-  "versionCode": 19,
-  "tag": "v1.2-beta.8",
-  "apkUrl": "https://github.com/Damonj2/KinAndroid-Releases/releases/download/v1.2-beta.8/Kin-v1.2-beta.8-Host-query-root-reconcile-debug.apk",
-  "apkSha256": "bb4bbee91c1e8a0702089d45c9c29e8a5d6886143eede2e14072cd8f17a95f4e",
-  "apkSize": 147844433,
-  "releaseUrl": "https://github.com/Damonj2/KinAndroid-Releases/releases/tag/v1.2-beta.8",
-  "publishedAt": "2026-10-09T01:30:00Z",
+  "versionName": "1.2-beta.9",
+  "versionCode": 20,
+  "tag": "v1.2-beta.9",
+  "apkUrl": "https://github.com/Damonj2/KinAndroid-Releases/releases/download/v1.2-beta.9/Kin-v1.2-beta.9-gate-split-subscription-names-debug.apk",
+  "apkSha256": "282f2b986df59e13b800d9eb5853e96904272f8f0c3d02996529073cb33ea831",
+  "apkSize": 147850257,
+  "releaseUrl": "https://github.com/Damonj2/KinAndroid-Releases/releases/tag/v1.2-beta.9",
+  "publishedAt": "2026-10-09T02:45:00Z",
   "notes": [
-    "修复 Host query/root 时间错配：root 成为执行真值，不再用 stale event.packageName 查询别的 App 的节点树",
-    "新增 HOST_RECONCILE 行为诊断（ALIGNED / REBOUND_TO_ROOT / DROPPED_*）",
-    "block 名单最小补齐 launcher/systemui，避免对系统桌面执行全局规则",
-    "补齐位置权限（细/粗略），系统权限页可见「位置」条目",
-    "本版本改变 GKD 过滤执行路径（Host 侧对账），未改动 selector/runtime 核心"
+    "诊断插桩：拆分 disabledSkip 为 disabledMasterSkip / disabledPausedSkip，两个 gate 各自归因（只加观测，不改执行语义）",
+    "新增 UI_CLEANER_GATE_STATE 诊断：SERVICE_CONNECTED / DATASTORE_UPDATE / DISABLED_SKIP 三来源统一落盘",
+    "新增 APP_RULE_STATS_TRACE：对账「订阅/可执行/不兼容」三层口径，定位「显示 0」丢在哪一层",
+    "引擎状态区显示真实订阅名，去掉写死的 Lin-arm / ganlinte",
+    "本版本未改动 GKD selector/runtime/pipeline 执行路径"
   ]
 }
