@@ -1,20 +1,21 @@
 {
   "schemaVersion": 1,
   "channel": "beta",
-  "versionName": "1.2-beta.10",
-  "versionCode": 21,
-  "tag": "v1.2-beta.10",
-  "apkUrl": "https://github.com/Damonj2/KinAndroid-Releases/releases/download/v1.2-beta.10/Kin-v1.2-beta.10-blocked-transition-reentry-debug.apk",
-  "apkSha256": "f53db5aa6023c88333b78608ebb6e2c0eee3b5b58a4643353803003e446cbd42",
-  "apkSize": 147869481,
-  "releaseUrl": "https://github.com/Damonj2/KinAndroid-Releases/releases/tag/v1.2-beta.10",
-  "publishedAt": "2026-10-09T05:45:00Z",
+  "versionName": "1.3-beta.1",
+  "versionCode": 23,
+  "tag": "v1.3-beta.1",
+  "apkUrl": "https://github.com/Damonj2/KinAndroid-Releases/releases/download/v1.3-beta.1/Kin-v1.3-beta.1-UI-Cleaner-.-debug.apk",
+  "apkSha256": "489cff51c781cdd8bf0b86a8a98914362d9073b5a1aba20ced0b696c5d376219",
+  "apkSize": 128746984,
+  "releaseUrl": "https://github.com/Damonj2/KinAndroid-Releases/releases/tag/v1.3-beta.1",
+  "publishedAt": "2026-10-09T17:50:18Z",
   "notes": [
-    "blocked 转场不再直接丢弃：转场瞬间 root 仍属 launcher 时，改为拒绝执行 + 排一次 fresh reentry（真机 com.coolapk.market 51/51 DROPPED_BLOCKED 的修复）",
-    "诊断上传凭据改为运行时（Android Keystore AES-GCM），移除构建期 shared secret；诊断页新增凭据管理与一键上传",
-    "DiagnosticId 区分本地十六进制与服务端 Crockford Base32 两套校验，避免把合法服务端 ID 判为非法",
-    "新增 scripts/fetch-diagnostic.sh 用于本机取回诊断包",
-    "全量 625/625 测试通过",
-    "⚠️ 诊断上传链路未经端到端验证（R2 为空，对象键约定未证实）"
+    "Runtime 收口对齐 GKD 1.12：编排三件套统一、DIV-014 CONTENT_CHANGED 节流、DIV-013 interruptKey/guardInterrupt 移植",
+    "统一命中统计口径：新增 UiCleanerRuntimeUiState + HitStatsProjection，两个 ViewModel 删除各自 map/take/count",
+    "UI 组件收口：CleanerCommonUi 共享 SectionTitle/HitRow/CategoryRow，删除两屏逐字重复副本",
+    "规则数口径统一为订阅真实解析，内置规则仅兜底",
+    "构建修复：ACCESS_MOCK_LOCATION 加 tools:ignore=\"MockLocation\"（虚拟定位必需声明，release 也需保留）",
+    "验证：clean testDebugUnitTest assembleDebug -x lint → BUILD SUCCESSFUL；lintVitalRelease 通过；全量单测 0 failures",
+    "⚠️ source-first/root-fallback instrumentation 本机无模拟器未验，标 NOT VERIFIED"
   ]
 }
