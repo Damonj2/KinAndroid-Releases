@@ -1,17 +1,17 @@
 {
   "schemaVersion": 1,
   "channel": "beta",
-  "versionName": "1.3-beta.4",
-  "versionCode": 26,
-  "tag": "v1.3-beta.4",
-  "apkUrl": "https://github.com/Damonj2/KinAndroid-Releases/releases/download/v1.3-beta.4/Kin-v1.3-beta.4-nav-fix-debug.apk",
-  "apkSha256": "34bcc9476a1717051708a723c3317bfaddcd54476a51d453843bf4068f6187b8",
-  "apkSize": 148025644,
-  "releaseUrl": "https://github.com/Damonj2/KinAndroid-Releases/releases/tag/v1.3-beta.4",
-  "publishedAt": "2026-10-10T13:59:55Z",
+  "versionName": "1.3-beta.5",
+  "versionCode": 27,
+  "tag": "v1.3-beta.5",
+  "apkUrl": "https://github.com/Damonj2/KinAndroid-Releases/releases/download/v1.3-beta.5/Kin-v1.3-beta.5-subsid-align-debug.apk",
+  "apkSha256": "7891dd407c35fdb1f5eddd69da40df01ea95424f3af91f43bff35db97ed609fd",
+  "apkSize": 148026292,
+  "releaseUrl": "https://github.com/Damonj2/KinAndroid-Releases/releases/tag/v1.3-beta.5",
+  "publishedAt": "2026-10-10T14:55:56Z",
   "notes": [
-    "修复订阅Hub死循环：广告过滤/节点订阅的管理与添加点击无反应",
-    "接回孤岛的节点订阅管理页（SUBSCRIPTION_MANAGE）",
-    "工具Hub：12个悬空标签收口为10个真实落点"
+    "根因修复：订阅规则开关点了弹回（存储用URL哈希、查询用订阅JSON id，两套ID错位）",
+    "连带修复：开屏批量启用在运行时从未生效（同一错位）",
+    "存储层保持URL哈希不变，注入引擎前统一翻译"
   ]
 }
