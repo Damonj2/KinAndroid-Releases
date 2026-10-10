@@ -3,3 +3,4 @@
 f53db5aa6023c88333b78608ebb6e2c0eee3b5b58a4643353803003e446cbd42  Kin-v1.2-beta.10-blocked-transition-reentry-debug.apk
 2b7796e6cfa9033bd49a9510d992248d544054287568f37ad39ebba6e3b80e89  Kin-Android-1.2-beta.10-source.tar.gz
 489cff51c781cdd8bf0b86a8a98914362d9073b5a1aba20ced0b696c5d376219  Kin-v1.3-beta.1-UI-Cleaner-.-debug.apk
+f5db006bda4c841d8717eed3e1fda2d853d7a666f7fad3276bb92e410e60880e  Kin-v1.3-beta.3-splash-batch-ui-debug.apk
