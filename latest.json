@@ -5,8 +5,8 @@
   "versionCode": 24,
   "tag": "v1.3-beta.2",
   "apkUrl": "https://github.com/Damonj2/KinAndroid-Releases/releases/download/v1.3-beta.2/Kin-v1.3-beta.2-UI-Overhaul-debug.apk",
-  "apkSha256": "d0d275fd3c49064ee424783f552033da3b57d76ce5b1263ce337f4bd31920ac3",
-  "apkSize": 147916020,
+  "apkSha256": "9ab204b0265709a1e614c7b320fdfe1b7c6b3c99e44409cd482d225641d9e19f",
+  "apkSize": 148057748,
   "releaseUrl": "https://github.com/Damonj2/KinAndroid-Releases/releases/tag/v1.3-beta.2",
   "publishedAt": "2026-10-10T04:20:00Z",
   "notes": [
@@ -16,6 +16,7 @@
     "设置页重组为四模块：网络 / 功能 / 数据与维护 / 关于",
     "数据真实性：清除 Mock 数据与硬编码示例值；移除误导指标「有效规则 58.4%」，改为 GKD 六维统计",
     "深色模式全页验证：无黑底黑字/白底白字，textSecondary 对比度 5.85:1 达 WCAG AA",
-    "验证：assembleDebug + testDebugUnitTest BUILD SUCCESSFUL，392 单测 0 failures；lint 零新增"
+    "验证：assembleDebug + testDebugUnitTest BUILD SUCCESSFUL，392 单测 0 failures；lint 零新增",
+    "修复：UpdateDialogs 此前定义但从未挂载 —— 「发现新版本」弹层不出现导致下载入口不可达，已接入设置页 UI 树"
   ]
 }
