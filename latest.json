@@ -1,17 +1,18 @@
 {
   "schemaVersion": 1,
   "channel": "beta",
-  "versionName": "1.3-beta.5",
-  "versionCode": 27,
-  "tag": "v1.3-beta.5",
-  "apkUrl": "https://github.com/Damonj2/KinAndroid-Releases/releases/download/v1.3-beta.5/Kin-v1.3-beta.5-subsid-align-debug.apk",
-  "apkSha256": "7891dd407c35fdb1f5eddd69da40df01ea95424f3af91f43bff35db97ed609fd",
-  "apkSize": 148026292,
-  "releaseUrl": "https://github.com/Damonj2/KinAndroid-Releases/releases/tag/v1.3-beta.5",
-  "publishedAt": "2026-10-10T14:55:56Z",
+  "versionName": "1.3-beta.6",
+  "versionCode": 28,
+  "tag": "v1.3-beta.6",
+  "apkUrl": "https://github.com/Damonj2/KinAndroid-Releases/releases/download/v1.3-beta.6/Kin-v1.3-beta.6-engine-diag-ui-debug.apk",
+  "apkSha256": "3982a6d5c192088b952420178e014e33755cabf84e527e3ccf7eba551cd7523b",
+  "apkSize": 148038644,
+  "releaseUrl": "https://github.com/Damonj2/KinAndroid-Releases/releases/tag/v1.3-beta.6",
+  "publishedAt": "2026-10-10T17:02:57Z",
   "notes": [
-    "根因修复：订阅规则开关点了弹回（存储用URL哈希、查询用订阅JSON id，两套ID错位）",
-    "连带修复：开屏批量启用在运行时从未生效（同一错位）",
-    "存储层保持URL哈希不变，注入引擎前统一翻译"
+    "诊断：新增 INDEX_REBUILD 事件，可一眼判定 0 命中是装载问题还是匹配问题",
+    "性能：应用规则页拨开关不再卡顿（不再全量重解析订阅）",
+    "UI：延迟监测卡加服务标识；工具/设置入口收口",
+    "体验：按分类批量启用（开屏/全屏/分段广告等），可撤销"
   ]
 }
