@@ -1,17 +1,17 @@
 {
   "schemaVersion": 1,
   "channel": "beta",
-  "versionName": "1.3-beta.7",
-  "versionCode": 29,
-  "tag": "v1.3-beta.7",
-  "apkUrl": "https://github.com/Damonj2/KinAndroid-Releases/releases/download/v1.3-beta.7/Kin-v1.3-beta.7-diag-apprules-fix-debug.apk",
-  "apkSha256": "abcabd9ca977b684009ebb2d078b335c0cc2517fe32287139073127bb5a54ebf",
-  "apkSize": 148041256,
-  "releaseUrl": "https://github.com/Damonj2/KinAndroid-Releases/releases/tag/v1.3-beta.7",
-  "publishedAt": "2026-10-11T03:56:19Z",
+  "versionName": "1.3-beta.8",
+  "versionCode": 30,
+  "tag": "v1.3-beta.8",
+  "apkUrl": "https://github.com/Damonj2/KinAndroid-Releases/releases/download/v1.3-beta.8/Kin-v1.3-beta.8-hostroot-window-fix-debug.apk",
+  "apkSha256": "0b063931cf1e862401fbb78e09c2b826111f18a169868551e819dd10f44f7724",
+  "apkSize": 148044336,
+  "releaseUrl": "https://github.com/Damonj2/KinAndroid-Releases/releases/tag/v1.3-beta.8",
+  "publishedAt": "2026-10-11T10:48:50Z",
   "notes": [
-    "诊断：FIRST_ZERO_TRACE 单开通道，不再被 general.log 挤掉（真机包实测 86% 占用）",
-    "诊断：INDEX_REBUILD 的 appGroupsEnabled 不再硬编码 0，覆盖是否进引擎可一眼判定",
-    "性能：应用规则页主线程磁盘 I/O 移出，进页面/拨开关不再卡顿"
+    "修复：引擎从未跑过一次查询的根因 —— AccessibilityEvent 被系统回收后再读 source/packageName 得 null，现改为同步回调内一次性抽取并下传",
+    "新增：windows 兜底 —— root 为 launcher/self/缺失时，枚举目标 App 的 TYPE_APPLICATION window root 作为查询节点",
+    "诊断：新增 winRootFallback / winRootRejected 计数，可一眼判定两条新路径是否生效"
   ]
 }
