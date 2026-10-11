@@ -1,18 +1,17 @@
 {
   "schemaVersion": 1,
   "channel": "beta",
-  "versionName": "1.3-beta.6",
-  "versionCode": 28,
-  "tag": "v1.3-beta.6",
-  "apkUrl": "https://github.com/Damonj2/KinAndroid-Releases/releases/download/v1.3-beta.6/Kin-v1.3-beta.6-engine-diag-ui-debug.apk",
-  "apkSha256": "3982a6d5c192088b952420178e014e33755cabf84e527e3ccf7eba551cd7523b",
-  "apkSize": 148038644,
-  "releaseUrl": "https://github.com/Damonj2/KinAndroid-Releases/releases/tag/v1.3-beta.6",
-  "publishedAt": "2026-10-10T17:02:57Z",
+  "versionName": "1.3-beta.7",
+  "versionCode": 29,
+  "tag": "v1.3-beta.7",
+  "apkUrl": "https://github.com/Damonj2/KinAndroid-Releases/releases/download/v1.3-beta.7/Kin-v1.3-beta.7-diag-apprules-fix-debug.apk",
+  "apkSha256": "abcabd9ca977b684009ebb2d078b335c0cc2517fe32287139073127bb5a54ebf",
+  "apkSize": 148041256,
+  "releaseUrl": "https://github.com/Damonj2/KinAndroid-Releases/releases/tag/v1.3-beta.7",
+  "publishedAt": "2026-10-11T03:56:19Z",
   "notes": [
-    "诊断：新增 INDEX_REBUILD 事件，可一眼判定 0 命中是装载问题还是匹配问题",
-    "性能：应用规则页拨开关不再卡顿（不再全量重解析订阅）",
-    "UI：延迟监测卡加服务标识；工具/设置入口收口",
-    "体验：按分类批量启用（开屏/全屏/分段广告等），可撤销"
+    "诊断：FIRST_ZERO_TRACE 单开通道，不再被 general.log 挤掉（真机包实测 86% 占用）",
+    "诊断：INDEX_REBUILD 的 appGroupsEnabled 不再硬编码 0，覆盖是否进引擎可一眼判定",
+    "性能：应用规则页主线程磁盘 I/O 移出，进页面/拨开关不再卡顿"
   ]
 }
