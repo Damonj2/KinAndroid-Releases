@@ -1,17 +1,17 @@
 {
   "schemaVersion": 1,
   "channel": "beta",
-  "versionName": "1.3-beta.9",
-  "versionCode": 31,
-  "tag": "v1.3-beta.9",
-  "apkUrl": "https://github.com/Damonj2/KinAndroid-Releases/releases/download/v1.3-beta.9/Kin-v1.3-beta.9-fastquery-index-debug.apk",
-  "apkSha256": "6dc9f1dd821f92a1c774bd97c9a09adae2b01abd422fd03312e15c56323ec23b",
-  "apkSize": 148046108,
-  "releaseUrl": "https://github.com/Damonj2/KinAndroid-Releases/releases/tag/v1.3-beta.9",
-  "publishedAt": "2026-10-11T15:20:56Z",
+  "versionName": "1.3-beta.10",
+  "versionCode": 32,
+  "tag": "v1.3-beta.10",
+  "apkUrl": "https://github.com/Damonj2/KinAndroid-Releases/releases/download/v1.3-beta.10/Kin-v1.3-beta.10-no-gkd-adblock-only-debug.apk",
+  "apkSha256": "7c2d40066b9268b5c962b3484625a18a0aadb6154fbd83215a3a377cd5feb6d6",
+  "apkSize": 146960514,
+  "releaseUrl": "https://github.com/Damonj2/KinAndroid-Releases/releases/tag/v1.3-beta.10",
+  "publishedAt": "2026-10-11T17:04:36Z",
   "notes": [
-    "修复：开屏广告跳不过的根因 —— fastQuery 被覆写成全树 DFS+逐属性读取，每次属性读都是跨进程 binder 调用，单条规则匹配 400-700ms、单轮 pipeline 约 8s，超过开屏 3-5s 窗口；querying 单飞闸门被占满，窗口期内事件全丢（events=1046 processedNo=0）。现改走平台索引 API（findAccessibilityNodeInfosByViewId / ByText），与官方 GKD 1.12.1 一致",
-    "保持：返回候选仍逐条完整校验；索引无法安全表达时退回全树扫描，保证不漏匹配",
-    "范围：仅适配器 + 新增测试 + 版本号，核心层零改动"
+    "本版移除整套 GKD 界面净化（无障碍点按）：kin-gkd-core 模块（106 文件/47MB）、无障碍服务与配置、应用内净化/应用规则/命中记录页面、GKD 专属诊断通道全部下线。221 files changed, 71 insertions(+), 35523 deletions(-)",
+    "广告过滤统一走 sing-box DNS 域名拦截：HaGeZi 三档（轻量/标准/强力）+ 白名单 + 规则更新 + 真实 DNS 探针（不做假统计）。入口收敛：工具页过滤工具 4 项 → 1 项「广告过滤」",
+    "能力变化：DNS 层只能拦域名，App 自身域名下发的开屏广告（如运营商 StartPageActivity）与正文同域名，拦不掉。这是移除无障碍点按后的能力降级，非缺陷。验证：compileDebugKotlin 通过、单测 193 项 0 failures、APK 内 manifest 无 accessibility 声明且 16 个 dex 中 GKD 类命中为 0"
   ]
 }
