@@ -1,17 +1,17 @@
 {
   "schemaVersion": 1,
   "channel": "beta",
-  "versionName": "1.3-beta.8",
-  "versionCode": 30,
-  "tag": "v1.3-beta.8",
-  "apkUrl": "https://github.com/Damonj2/KinAndroid-Releases/releases/download/v1.3-beta.8/Kin-v1.3-beta.8-hostroot-window-fix-debug.apk",
-  "apkSha256": "0b063931cf1e862401fbb78e09c2b826111f18a169868551e819dd10f44f7724",
-  "apkSize": 148044336,
-  "releaseUrl": "https://github.com/Damonj2/KinAndroid-Releases/releases/tag/v1.3-beta.8",
-  "publishedAt": "2026-10-11T10:48:50Z",
+  "versionName": "1.3-beta.9",
+  "versionCode": 31,
+  "tag": "v1.3-beta.9",
+  "apkUrl": "https://github.com/Damonj2/KinAndroid-Releases/releases/download/v1.3-beta.9/Kin-v1.3-beta.9-fastquery-index-debug.apk",
+  "apkSha256": "6dc9f1dd821f92a1c774bd97c9a09adae2b01abd422fd03312e15c56323ec23b",
+  "apkSize": 148046108,
+  "releaseUrl": "https://github.com/Damonj2/KinAndroid-Releases/releases/tag/v1.3-beta.9",
+  "publishedAt": "2026-10-11T15:20:56Z",
   "notes": [
-    "修复：引擎从未跑过一次查询的根因 —— AccessibilityEvent 被系统回收后再读 source/packageName 得 null，现改为同步回调内一次性抽取并下传",
-    "新增：windows 兜底 —— root 为 launcher/self/缺失时，枚举目标 App 的 TYPE_APPLICATION window root 作为查询节点",
-    "诊断：新增 winRootFallback / winRootRejected 计数，可一眼判定两条新路径是否生效"
+    "修复：开屏广告跳不过的根因 —— fastQuery 被覆写成全树 DFS+逐属性读取，每次属性读都是跨进程 binder 调用，单条规则匹配 400-700ms、单轮 pipeline 约 8s，超过开屏 3-5s 窗口；querying 单飞闸门被占满，窗口期内事件全丢（events=1046 processedNo=0）。现改走平台索引 API（findAccessibilityNodeInfosByViewId / ByText），与官方 GKD 1.12.1 一致",
+    "保持：返回候选仍逐条完整校验；索引无法安全表达时退回全树扫描，保证不漏匹配",
+    "范围：仅适配器 + 新增测试 + 版本号，核心层零改动"
   ]
 }
