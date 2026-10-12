@@ -6,3 +6,4 @@ f53db5aa6023c88333b78608ebb6e2c0eee3b5b58a4643353803003e446cbd42  Kin-v1.2-beta.
 f5db006bda4c841d8717eed3e1fda2d853d7a666f7fad3276bb92e410e60880e  Kin-v1.3-beta.3-splash-batch-ui-debug.apk
 abcabd9ca977b684009ebb2d078b335c0cc2517fe32287139073127bb5a54ebf  Kin-v1.3-beta.7-diag-apprules-fix-debug.apk
 7c2d40066b9268b5c962b3484625a18a0aadb6154fbd83215a3a377cd5feb6d6  Kin-v1.3-beta.10-no-gkd-adblock-only-debug.apk
+d42c7af7434829a5f3c43f59af994fb92244607b3ac50224bdf13e5ba1ba996d  Kin-v1.3-beta.13-adblock-log-debug.apk
