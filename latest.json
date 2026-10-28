@@ -1,21 +1,21 @@
 {
   "schemaVersion": 1,
   "channel": "beta",
-  "versionName": "1.4-beta.1",
-  "versionCode": 37,
-  "tag": "v1.4-beta.1",
-  "apkUrl": "https://github.com/Damonj2/KinAndroid-Releases/releases/download/v1.4-beta.1/Kin-v1.4-beta.1-UI-overhaul-release.apk",
-  "apkSha256": "8f02bac298394e9e6b9fe3e9bd4c9c06b0c2c52064af4b7d51f5a16deef317ec",
-  "apkSize": 128242805,
-  "releaseUrl": "https://github.com/Damonj2/KinAndroid-Releases/releases/tag/v1.4-beta.1",
-  "publishedAt": "2026-10-28T08:46:00Z",
+  "versionName": "1.4-beta.2",
+  "versionCode": 38,
+  "tag": "v1.4-beta.2",
+  "apkUrl": "https://github.com/Damonj2/KinAndroid-Releases/releases/download/v1.4-beta.2/Kin-v1.4-beta.2-dashboard-release.apk",
+  "apkSha256": "7aaea6ecfe1bc8c6429756d15ed09945f1cd17422ba28d6f733963b053a3a3d9",
+  "apkSize": 128249203,
+  "releaseUrl": "https://github.com/Damonj2/KinAndroid-Releases/releases/tag/v1.4-beta.2",
+  "publishedAt": "2026-10-28T10:16:00Z",
   "notes": [
-    "UI 重构：全面对齐 FlClash。导航改为 5 Tab（首页/节点/订阅/工具/设置），统一卡片圆角、分组间距、状态胶囊、延迟色标与双线流量图；三屏重画两屏换皮，业务逻辑与数据口径一行未改，核心层零改动",
-    "首页：连接卡改 FlClash 形态——状态胶囊 + 大字状态（保护中/未保护）+ 当前节点带延迟色标 + 整宽渐变连接按钮，取代原先的小开关；流量卡改下载/上传双线趋势并显示活跃连接数",
-    "节点页：列表合卡，行底色改透明（卡片内叠半透明白会出脏色）；延迟统一色标 <200ms 绿 / <500ms 黄 / ≥500ms 红，与首页完全一致；标题显示「共 N 个节点」",
-    "订阅页：订阅列表合卡 + 状态胶囊，「未更新」用中性色而非错误色——首次添加不应一片红。未画流量进度条：订阅实体只有节点数与更新时间，没有流量上下限字段",
-    "工具/设置：统一到同一套设计令牌；设置页补副标题，分组标题改用统一字阶，圆角与其余四屏一致",
-    "发布方式变更：本轮起由 debug 包改为签名 release 包。签名沿用同一把密钥（CN=Android Debug），保证存量用户可覆盖升级——换密钥会让所有老用户收到 INSTALL_FAILED_UPDATE_INCOMPATIBLE",
-    "验证：单元测试 294 项 0 失败；zipalign 4 字节对齐通过；versionCode 37；AVD 实测 OTA 覆盖升级 v0.5.1(vc=5) → 1.4-beta.1(vc=37) 安装成功、数据保留、启动 2.9s 无崩溃；五 Tab 冒烟无 FATAL"
+    "仪表盘按 FlClash 真实结构重画。上一版是按「FlClash 风格」凭印象做的，结构就不对——把连接区做成了一张大卡加整宽长条按钮。本轮装上 FlClash 0.9.2 截其真实仪表盘、并读其 dashboard 源码取结构与尺寸后重做",
+    "新结构：一屏多张独立卡片，每张自带「图标+标题」头。顺序为状态（含出口 IP/位置/运营商，右侧大圆形主控）、网络速度（上传/下载两块等宽内嵌面板）、分流模式（三等分分段控件）、当前节点、广告过滤、服务连通",
+    "主控由整宽长条改为圆形。上一版判断「主页唯一主操作应该用整宽按钮，点击目标更大」，但 FlClash 用圆形正是为了让信息区能并排在左侧；整宽长条会把状态卡变成一条按钮，信息密度全部让位。运行中额外加一层光晕表示工作状态",
+    "尺寸取自 FlClash 源码实测：卡片圆角 34 / 内嵌块 22 / 内边距横 20 竖 18。新增 dashboard 专用尺寸，不改全站卡片圆角——节点、订阅、设置是长列表，圆角放大反而显松散",
+    "速度面板不照抄 FlClash 的「Total 0 B」：NetProtectState.uplink/downlink 全项目无任何赋值、恒为 0，照抄等于伪造累计量。改为展示 TrafficState 真实维护的「今日已用」，并明确标注「上下行合计」（它确实是合计值）",
+    "未连接时出口 IP 实为直连出口，此前不加区分容易被读成「未连接却显示香港 IP」，现标注「直连出口 IP」。FlClash 状态卡的「Data center」机房类型 Kin 无此字段，改用真实的运营商；运行时长 Kin 未记录连接起始时刻，故不展示",
+    "验证：单元测试 294 项 0 失败；versionCode 38；签名证书与历史包一致；zipalign 4 字节对齐通过；AVD 实测 OTA 覆盖升级 vc=37 → vc=38 成功、启动 2.4s 无 FATAL；逐屏截图核对六张卡全部正常渲染，滚到底最后一张完整可见未被底栏遮挡"
   ]
 }
